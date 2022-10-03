@@ -5,12 +5,12 @@ const fs = require('fs');
 const htmlBefore = fs.readFileSync('./index.html', { encoding: 'utf8' });
 
 const htmlAfter = sanitizeHtml(htmlBefore, {
-    allowedTags: ['style', 'i', 'body', 'head', 'html', 'DOCTYPE', 'input', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'title', 'ul', 'ol', 'li', /**'table', 'th', 'tr', 'td' */],
+    allowedTags: ['style', 'i', 'body', 'head', 'html', 'DOCTYPE', 'input', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'title', 'ul', 'ol', 'li', 'table', 'th', 'tr', 'td', 'tbody', 'option', 'label', 'select'],
     allowedClasses: {
         '*': [/que.*completed/gmi, 'answer', 'sr-only', 'sr-only-focusable', 'submitbtns', 'qn_buttons', 'allquestionsononepage', 'navbar', 'navbar-expand', 'generaltable', 'quizreviewsummary', 'global-search', 'search-container', 'flex-fill', 'ml-1', 'qtext', 'state', 'grade', 'deferredfeedback', ...'icon fa fa-check text-success fa-fw'.split(' '), 'text-danger']
     },
     allowedAttributes: {
-        '*': ['id', 'src', 'crossorigin', 'integrity', 'alt', 'type', 'disabled', 'checked', 'value']
+        '*': ['id', 'src', 'crossorigin', 'integrity', 'alt', 'type', 'disabled', 'checked', 'value', 'selected']
     },
     allowVulnerableTags: true
 
