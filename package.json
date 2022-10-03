@@ -1,0 +1,31 @@
+{
+  "name": "hello-masterat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node index.js && beautify index.html",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "pre-commit": [ "lint" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cujba-mihai/hello-masterat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cujba-mihai/hello-masterat/issues"
+  },
+  "homepage": "https://github.com/cujba-mihai/hello-masterat#readme",
+  "dependencies": {
+    "beautify": "^0.0.8",
+    "clean-html": "^1.5.0",
+    "htmlclean": "^3.0.8",
+    "sanitize-html": "^2.7.2"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
+}
