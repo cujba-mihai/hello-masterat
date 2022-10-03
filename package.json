@@ -8,7 +8,9 @@
     "lint": "node index.js && beautify index.html",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
-  "pre-commit": [ "lint" ],
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cujba-mihai/hello-masterat.git"
@@ -22,7 +24,7 @@
   "dependencies": {
     "beautify": "^0.0.8",
     "clean-html": "^1.5.0",
-    "htmlclean": "^3.0.8",
+    "node-html-parser": "^6.1.1",
     "sanitize-html": "^2.7.2"
   },
   "devDependencies": {
